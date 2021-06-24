@@ -1,6 +1,5 @@
 <?php require 'vendor/autoload.php';
     echo("Estos son tus datos: <br/>");
-    
     echo "Tu(s) nombre(s): ". $_GET["nombre"]. "<br/>";
     echo "Tu(s) apellido(s): ". $_GET["apellido"]. "<br/>";
     try {
@@ -9,7 +8,9 @@
         $collection = $db->formulario;
                 $document = $collection->find();
         foreach ($document as $item) {
+            echo $item['id'] . '</br>';
             echo $item['nombre'] . '</br>';
+            echo $item['apellido'] . '</br>';
         }
         echo "final";
             } catch (PDOException $e) {
