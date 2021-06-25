@@ -7,7 +7,7 @@
     echo $_GET["apellido"]. "<br/>";
     try {
         $client = new MongoDB\Client(
-            'mongodb+srv://admindb:<condedoku>@admindb.tjyfp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+            'mongodb+srv://admindb:<condedoku>@admindb.tjyfp.mongodb.net/desarrolloweb?retryWrites=true&w=majority');
         $db = $client->desarrolloweb;
         $collection = $db->formulario;
                 $document = $collection->find();
