@@ -1,9 +1,13 @@
 <?php require 'vendor/autoload.php';
-    echo("Estos son tus datos: <br/>");
-    echo "Tu(s) nombre(s): ". $_GET["nombre"]. "<br/>";
-    echo "Tu(s) apellido(s): ". $_GET["apellido"]. "<br/>";
+    echo("La conexion fue exitosa <br/>");
+    echo("60ccee2d248cb01490a551af <br/>");
+    echo("Juan <br/>");
+    echo("Shoto <br/>");
+    echo $_GET["nombre"]. "<br/>";
+    echo $_GET["apellido"]. "<br/>";
     try {
-        $client = new MongoDB\Client('');
+        $client = new MongoDB\Client(
+            'mongodb+srv://admindb:<condedoku>@admindb.tjyfp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
         $db = $client->desarrolloweb;
         $collection = $db->formulario;
                 $document = $collection->find();
